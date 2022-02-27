@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "7444b8d4-df7a-4a92-871b-a530c9bc58f2",
+		"name": "Linx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Config",
+			"item": [
+				{
+					"name": "Get Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/configs",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Config",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"despesasTotais\": 200.0,\r\n    \"pcMargemLucro\": 15.0,\r\n    \"createdAt\": \"2022-02-27T13:34:23.414+00:00\",\r\n    \"updatedAt\": \"2022-02-27T13:34:23.414+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/configs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Find All Itens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/itens?toVenda=false",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itens"
+							],
+							"query": [
+								{
+									"key": "toVenda",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"COMPUTADOR44\",\r\n    \"descricao\": \"COMPUTADOR44\",\r\n    \"imagem\": \"teste\",\r\n    \"custoCompra\": 2000.0,\r\n    \"precoVendaProduto\": 5000.0,\r\n    \"creatAt\": null,\r\n    \"upadatedAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/itens",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"COMPUTADOR1-editado\",\r\n    \"descricao\": \"COMPUTADOR1-editado\",\r\n    \"imagem\": \"teste\",\r\n    \"custoCompra\": 2000.0,\r\n    \"precoVendaProduto\": 5000.0,\r\n    \"creatAt\": \"2022-02-27T15:04:56.193+00:00\",\r\n    \"upadatedAt\": \"2022-02-27T15:04:56.193+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/itens/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/itens/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/itens/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venda",
+			"item": [
+				{
+					"name": "Find All Vendas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vendas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Venda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"createdAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n    \"updatedAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n    \"listaItensVenda\": [\r\n        {\r\n            \"id\": null,\r\n            \"item\": {\r\n                \"id\": 1,\r\n                \"nome\": \"COMPUTADOR1\",\r\n                \"descricao\": \"COMPUTADOR1\",\r\n                \"imagem\": null,\r\n                \"custoCompra\": 2000.0,\r\n                \"precoVendaProduto\": 5000.0,\r\n                \"creatAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n                \"upadatedAt\": \"2022-02-27T16:39:20.555+00:00\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"vlPrecoVenda\": 2500.0,\r\n            \"vlTotalVenda\": 5000.0\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"item\": {\r\n                \"id\": 2,\r\n                \"nome\": \"COMPUTADOR2\",\r\n                \"descricao\": \"COMPUTADOR2\",\r\n                \"imagem\": null,\r\n                \"custoCompra\": 2000.0,\r\n                \"precoVendaProduto\": 5000.0,\r\n                \"creatAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n                \"upadatedAt\": \"2022-02-27T16:39:20.555+00:00\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"vlPrecoVenda\": 2500.0,\r\n            \"vlTotalVenda\": 5000.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vendas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Venda",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"createdAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n    \"updatedAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n    \"listaItensVenda\": [\r\n        {\r\n            \"id\": 1,\r\n            \"item\": {\r\n                \"id\": 1,\r\n                \"nome\": \"COMPUTADOR1\",\r\n                \"descricao\": \"COMPUTADOR1\",\r\n                \"imagem\": null,\r\n                \"custoCompra\": 2000.0,\r\n                \"precoVendaProduto\": 5000.0,\r\n                \"creatAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n                \"upadatedAt\": \"2022-02-27T16:39:20.555+00:00\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"vlPrecoVenda\": 3000.0,\r\n            \"vlTotalVenda\": 6000.0\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"item\": {\r\n                \"id\": 2,\r\n                \"nome\": \"COMPUTADOR2\",\r\n                \"descricao\": \"COMPUTADOR2\",\r\n                \"imagem\": null,\r\n                \"custoCompra\": 2000.0,\r\n                \"precoVendaProduto\": 5000.0,\r\n                \"creatAt\": \"2022-02-27T16:39:20.555+00:00\",\r\n                \"upadatedAt\": \"2022-02-27T16:39:20.555+00:00\"\r\n            },\r\n            \"quantidade\": 2,\r\n            \"vlPrecoVenda\": 3000.0,\r\n            \"vlTotalVenda\": 6000.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vendas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vendas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Venda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vendas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vendas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
