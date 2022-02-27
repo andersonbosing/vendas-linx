@@ -24,3 +24,7 @@ _`selecione o diretório desejado e em seguida execute os comandos`_:
 #### Documentacao de Analise Projeto Disponivel em:
   
   > _Pasta da Raiz do Projeto /docs_
+
+#### Collection do Postman para importação disponivel em:
+  
+  > _Pasta da Raiz do Projeto /docs/Linx.postman_collection.json_
